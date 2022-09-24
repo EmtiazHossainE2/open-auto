@@ -5,10 +5,10 @@ import Feature from './Feature/Feature.jsx';
 
 const Home = () => {
   return (
-    <div>
+    <div className='py-5'>
       <Navbar/>
-      <Banner/>
-      <Feature/>
+      {/* <Banner/>
+      <Feature/> */}
     </div>
   );
 };
