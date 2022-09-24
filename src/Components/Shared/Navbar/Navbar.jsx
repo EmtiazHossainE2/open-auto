@@ -8,8 +8,8 @@ const Navbar = () => {
   return (
     <div className='container mx-auto px-5'>
       <div className='flex justify-between items-center'>
-        <img className='w-60 cursor-pointer' src={logo} alt="open-auto logo" />
-        <div className='flex justify-evenly gap-x-16 text-[#cdcbcb]'>
+        <img className='w-48 lg:w-60 cursor-pointer d-block mx-auto lg:mx-0' src={logo} alt="open-auto logo" />
+        <div className='hidden lg:flex justify-evenly gap-x-16 text-[#cdcbcb]'>
           <div className='flex items-center gap-x-2'>
             <FiPhoneCall />
             <a href='tel:+769 586 4558' target="_blank" rel="noopener noreferrer"
