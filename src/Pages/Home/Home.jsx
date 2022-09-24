@@ -7,8 +7,8 @@ const Home = () => {
   return (
     <div className='py-5'>
       <Navbar/>
-      {/* <Banner/>
-      <Feature/> */}
+      <Banner/>
+      {/* <Feature/> */}
     </div>
   );
 };
