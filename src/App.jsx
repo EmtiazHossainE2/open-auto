@@ -1,9 +1,10 @@
 import React from 'react';
+import Home from './Pages/Home/Home.jsx';
 
 const App = () => {
   return (
     <div>
-      <h2 className='text-center text-3xl'>This is open auto</h2>
+      <Home/>
     </div>
   );
 };
