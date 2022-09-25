@@ -65,7 +65,7 @@ const Banner = () => {
           <img src={Pickup_Illustration} alt="Pickup_Illustration" />
         </div>
       </div>
-      <div className='flex items-center'>
+      <div className='flex items-center pb-5'>
         <div className='w-6/12 hidden lg:flex justify-end text-4xl'>
           <BsFillCaretDownSquareFill className='rounded-full cursor-pointer' />
         </div>
