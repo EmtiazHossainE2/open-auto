@@ -8,7 +8,7 @@ const Home = () => {
     <div className='py-5'>
       <Navbar/>
       <Banner/>
-      {/* <Feature/> */}
+      <Feature/>
     </div>
   );
 };
