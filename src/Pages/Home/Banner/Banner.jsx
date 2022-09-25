@@ -1,10 +1,11 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import Pickup_Illustration from '../../../Assets/Pickup_Illustration.png'
-import { BsFillCaretDownSquareFill } from 'react-icons/bs'
+import { BsFillCaretDownSquareFill,BsFillCaretUpSquareFill } from 'react-icons/bs'
 import SocialIcon from '../../../Components/SocialIcon/SocialIcon';
 import { BASE_API } from '../../../config';
 import Swal from 'sweetalert2';
+import './Banner.css'
 
 const Banner = () => {
 
@@ -95,8 +96,9 @@ const Banner = () => {
         </div>
       </div>
       <div className='flex items-center pb-5'>
-        <div onClick={scrollToBottom} className='w-6/12 hidden lg:flex justify-end text-4xl'>
-          <BsFillCaretDownSquareFill className='rounded-full cursor-pointer' />
+        <div onClick={scrollToBottom} className='w-6/12  hidden lg:flex justify-end text-4xl lock'>
+          <BsFillCaretUpSquareFill className='rounded-full cursor-pointer icon1' />
+          <BsFillCaretDownSquareFill className='rounded-full cursor-pointer icon2' />
         </div>
         <SocialIcon />
       </div>

@@ -1,0 +1,9 @@
+.lock:hover .icon1,
+.lock .icon2 {
+  display: none;
+}
+
+.lock:hover .icon2{
+  display: inline;
+  transition-duration: 300ms;
+}
