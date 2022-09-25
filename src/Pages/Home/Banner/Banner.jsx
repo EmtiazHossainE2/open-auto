@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import Pickup_Illustration from '../../../Assets/Pickup_Illustration.png'
 import { RiFacebookFill, RiTwitterFill, RiYoutubeFill, RiLinkedinFill, RiInstagramFill } from 'react-icons/ri'
 import { BsFillCaretDownSquareFill } from 'react-icons/bs'
+import SocialIcon from '../../../Components/SocialIcon/SocialIcon';
 
 const Banner = () => {
 
@@ -69,13 +70,7 @@ const Banner = () => {
         <div className='w-6/12 hidden lg:flex justify-end text-4xl'>
           <BsFillCaretDownSquareFill className='rounded-full cursor-pointer' />
         </div>
-        <div className='w-full lg:w-6/12 flex justify-evenly lg:justify-end gap-x-3 pr-5'>
-          <a href="http://www.facebook.com" target="_blank" rel="noopener noreferrer"><RiFacebookFill className=' text-2xl' /></a>
-          <a href="http://www.twitter.com" target="_blank" rel="noopener noreferrer"><RiTwitterFill className=' text-2xl' /></a>
-          <a href="http://www.youtube.com" target="_blank" rel="noopener noreferrer"><RiYoutubeFill className=' text-2xl' /></a>
-          <a href="http://www.linkedin.com" target="_blank" rel="noopener noreferrer"><RiLinkedinFill className=' text-2xl' /></a>
-          <a href="http://www.instagram.com" target="_blank" rel="noopener noreferrer"><RiInstagramFill className=' text-2xl' /></a>
-        </div>
+        <SocialIcon/>
       </div>
     </div>
   );
