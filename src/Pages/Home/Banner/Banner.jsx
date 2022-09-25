@@ -1,7 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import Pickup_Illustration from '../../../Assets/Pickup_Illustration.png'
-import { RiFacebookFill, RiTwitterFill, RiYoutubeFill, RiLinkedinFill, RiInstagramFill } from 'react-icons/ri'
 import { BsFillCaretDownSquareFill } from 'react-icons/bs'
 import SocialIcon from '../../../Components/SocialIcon/SocialIcon';
 
