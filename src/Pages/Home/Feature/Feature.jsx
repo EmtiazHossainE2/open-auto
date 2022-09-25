@@ -3,8 +3,8 @@ import pickuService from '../../../Assets/picku service.png'
 
 const Feature = () => {
   return (
-    <div className='container mx-auto px-5 py-20 bg-[#141821]'>
-      <div className="flex flex-col-reverse lg:flex-row items-center gap-x-5 gap-y-12">
+    <div className='container mx-auto px-5  bg-[#141821]'>
+      <div className="flex flex-col-reverse lg:flex-row items-center py-20 gap-x-5 gap-y-12">
         <div className='lg:w-1/2 flex justify-center items-center'>
           <img className='w-[75%]' src={pickuService} alt="Picku_Service" />
         </div>
@@ -14,6 +14,7 @@ const Feature = () => {
           <a className='border-2 rounded-3xl px-6 py-2 ' href='https://play.google.com/store' target="_blank" rel="noopener noreferrer"> Download the mobile app </a>
         </div>
       </div>
+      <hr/>
     </div>
   );
 };
