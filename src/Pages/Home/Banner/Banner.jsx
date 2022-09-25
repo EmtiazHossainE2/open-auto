@@ -3,14 +3,43 @@ import { useForm } from 'react-hook-form';
 import Pickup_Illustration from '../../../Assets/Pickup_Illustration.png'
 import { BsFillCaretDownSquareFill } from 'react-icons/bs'
 import SocialIcon from '../../../Components/SocialIcon/SocialIcon';
+import { BASE_API } from '../../../config';
+import Swal from 'sweetalert2';
 
 const Banner = () => {
 
   const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
-  const onSubmit = (data) => {
-    console.log('submit', data);
-    reset()
+  const onSubmit = async(data) => {
+    // console.log(data);
+    await fetch(`${BASE_API}/userRecord`, {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then(res => res.json())
+      .then(data => {
+        if (data.insertedId) {
+          Swal.fire({
+            text: 'Your Data Recorded Successfully. ',
+            icon: 'success',
+            confirmButtonText: 'Okay'
+          })
+          reset()
+        }
+        else {
+          Swal.fire({
+            text: `Something is wrong`,
+            icon: 'error',
+            confirmButtonText: 'Try Again'
+          })
+        }
+      })
+  }
+
+  const scrollToBottom = () => {
+    window.scrollTo(0,document.body.scrollHeight);
   }
 
   return (
@@ -66,10 +95,10 @@ const Banner = () => {
         </div>
       </div>
       <div className='flex items-center pb-5'>
-        <div className='w-6/12 hidden lg:flex justify-end text-4xl'>
+        <div onClick={scrollToBottom} className='w-6/12 hidden lg:flex justify-end text-4xl'>
           <BsFillCaretDownSquareFill className='rounded-full cursor-pointer' />
         </div>
-        <SocialIcon/>
+        <SocialIcon />
       </div>
     </div>
   );
